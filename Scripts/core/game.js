@@ -14,8 +14,8 @@ var assetData = [
     { id: "Back", src: "../../Assets/images/Back.png" },
     { id: "Right", src: "../../Assets/images/Right.png" },
     { id: "Left", src: "../../Assets/images/Left.png" },
-    { id: "LeftPathScreen", src: "../../Assets/images/LeftPathScreen.png" },
-    { id: "RightPathScreen", src: "../../Assets/images/RightPathScreen.png" }
+    { id: "LeftPathScreen", src: "../../Assets/images/LeftPath.png" },
+    { id: "RightPathScreen", src: "../../Assets/images/RightPath.png" }
 ];
 function preload() {
     // Create a queue for assets being loaded

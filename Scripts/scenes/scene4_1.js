@@ -15,7 +15,7 @@ var scenes;
         }
         scene4_1.prototype.start = function () {
             console.log("Scene 4-1 Scene Started");
-            //var bgImage = new createjs.Bitmap("../../Assets/images/RightPathScreen.png");
+            //var bgImage = new createjs.Bitmap("../../Assets/images/RightPath.png");
             // Add button to scene. Register for click callback function
             this._leftButton = new objects.Button("Left", config.Screen.CENTER_X - 130, config.Screen.CENTER_Y + 180);
             this.addChild(this._leftButton);
