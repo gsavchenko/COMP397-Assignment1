@@ -7,43 +7,44 @@ var scenes;
 (function (scenes) {
     var scene3_2 = (function (_super) {
         __extends(scene3_2, _super);
-        // Menu Class Contructor
+        // scene3_2 Class Contructor
         function scene3_2() {
             _super.call(this);
-            this._bgImage = new createjs.Bitmap(assets.getResult("scene3_2"));
-            this.addChild(this._bgImage);
         }
+        // Initialize scene objects
         scene3_2.prototype.start = function () {
             console.log("Scene 3-2 Scene Started");
-            //var bgImage = new createjs.Bitmap("../../Assets/images/RightPath.png");
-            // Add button to scene. Register for click callback function
+            // Add background image to scene
+            this._bgImage = new createjs.Bitmap(assets.getResult("scene3_2"));
+            this.addChild(this._bgImage);
+            // Add button to scene
             this._leftButton = new objects.Button("Left", config.Screen.CENTER_X - 239, config.Screen.CENTER_Y + 233);
             this.addChild(this._leftButton);
             this._rightButton = new objects.Button("Right", config.Screen.CENTER_X + 170, config.Screen.CENTER_Y + 233);
             this.addChild(this._rightButton);
+            // Register for click callback function
             this._leftButton.on("click", this._leftButtonClick, this);
             this._rightButton.on("click", this._rightButtonClick, this);
+            // Make createjs Text object. Set properties. Add to scene.
             this._choiceOneText = new createjs.Text("Fine I Quit!", "bold 16px Arial", "#ffffff");
+            this._choiceTwoText = new createjs.Text("I'm Sorry I Just Can't.", "bold 16px Arial", "#ffffff");
             this._choiceOneText.x = this._leftButton.x - (this._choiceOneText.getBounds().width / 4);
             this._choiceOneText.y = this._leftButton.y - 16;
-            this.addChild(this._choiceOneText);
-            this._choiceTwoText = new createjs.Text("I'm Sorry I Just Can't.", "bold 16px Arial", "#ffffff");
             this._choiceTwoText.x = this._rightButton.x - (this._choiceTwoText.getBounds().width / 3);
             this._choiceTwoText.y = this._rightButton.y - 16;
+            this.addChild(this._choiceOneText);
             this.addChild(this._choiceTwoText);
-            // Add menu scene to global stage container
+            // Add scene3_2 to global stage container
             stage.addChild(this);
         };
-        scene3_2.prototype.update = function () {
-        };
+        // Mouse event handlers for mouse clicks
         scene3_2.prototype._leftButtonClick = function (event) {
-            // Change global scene variable to GAME. Call global changeScene() function
+            // Change global scene variable to scene4_3. Call global changeScene() function.
             scene = config.Scene.scene4_3;
             changeScene();
         };
-        // Fucntion for when button is pressed
         scene3_2.prototype._rightButtonClick = function (event) {
-            // Change global scene variable to GAME. Call global changeScene() function
+            // Change global scene variable to scene4_4. Call global changeScene() function.
             scene = config.Scene.scene4_4;
             changeScene();
         };

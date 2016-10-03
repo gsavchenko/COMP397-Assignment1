@@ -1,4 +1,15 @@
 /// <reference path = "_reference.ts" />
+/*
+    Class:              game
+    Description:        scenes module to group all user-defined scenes under the same namespace/module. Game scene that contains all assets and
+                        functionality associated with the game itself.
+
+    Author:             George Savchenko
+    Revision History:
+    Name:               Date:        Description:
+    ------------------------------------------------------------------
+    George Savchenko    10/3/2016    adding comments and cleaning code
+*/
 // Global Variables
 var assets;
 var canvas;
@@ -10,12 +21,8 @@ var entranceScene;
 var gameScene;
 // Preload Assets required
 var assetData = [
-    { id: "Start", src: "../../Assets/images/Start.png" },
-    { id: "Back", src: "../../Assets/images/Back.png" },
-    { id: "Right", src: "../../Assets/images/button.png" },
     { id: "Left", src: "../../Assets/images/button.png" },
-    { id: "LeftPathScreen", src: "../../Assets/images/LeftPath.png" },
-    { id: "RightPathScreen", src: "../../Assets/images/RightPath.png" },
+    { id: "Right", src: "../../Assets/images/button.png" },
     { id: "scene1", src: "../../Assets/images/scene1.png" },
     { id: "scene2_1", src: "../../Assets/images/scene2_1.png" },
     { id: "scene2_2", src: "../../Assets/images/scene2_2.png" },

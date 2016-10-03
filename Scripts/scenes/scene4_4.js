@@ -7,36 +7,32 @@ var scenes;
 (function (scenes) {
     var scene4_4 = (function (_super) {
         __extends(scene4_4, _super);
-        // Menu Class Contructor
+        // scene4_4 Class Contructor
         function scene4_4() {
             _super.call(this);
+        }
+        // Initialize sccene objects
+        scene4_4.prototype.start = function () {
+            console.log("Scene 4-4 Started");
+            // Add background image to scene
             this._bgImage = new createjs.Bitmap(assets.getResult("scene4_4"));
             this.addChild(this._bgImage);
-        }
-        scene4_4.prototype.start = function () {
-            console.log("Scene 4-4 Scene Started");
-            //var bgImage = new createjs.Bitmap("../../Assets/images/RightPath.png");
-            // Add button to scene. Register for click callback function
+            // Add button to scene 
             this._leftButton = new objects.Button("Left", config.Screen.CENTER_X - 239, config.Screen.CENTER_Y + 233);
             this.addChild(this._leftButton);
+            // Register for click callback function
             this._leftButton.on("click", this._leftButtonClick, this);
+            // Make createjs Text object. Set properties. Add to scene.
             this._restartText = new createjs.Text("Restart", "bold 16px Arial", "#ffffff");
             this._restartText.x = this._leftButton.x - (this._restartText.getBounds().width / 6);
             this._restartText.y = this._leftButton.y - 16;
             this.addChild(this._restartText);
-            // Add menu scene to global stage container
+            // Add scene4_4 to global stage container
             stage.addChild(this);
         };
-        scene4_4.prototype.update = function () {
-        };
-        // Fucntion for when button is pressed
-        scene4_4.prototype._rightButtonClick = function (event) {
-            // Change global scene variable to GAME. Call global changeScene() function
-            scene = config.Scene.scene1;
-            changeScene();
-        };
+        // Mouse event handler for mouse clicks
         scene4_4.prototype._leftButtonClick = function (event) {
-            // Change global scene variable to GAME. Call global changeScene() function
+            // Change global scene variable to scene1. Call global changeScene() function.
             scene = config.Scene.scene1;
             changeScene();
         };
