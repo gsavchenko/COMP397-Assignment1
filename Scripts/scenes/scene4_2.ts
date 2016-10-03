@@ -7,12 +7,13 @@ module scenes {
         private _leftButton : objects.Button;
         private _rightButton : objects.Button;
         private _bgImage : createjs.Bitmap;
+        private _restartText: createjs.Text;
 
         // Menu Class Contructor
         constructor()
         {
             super();
-            this._bgImage = new createjs.Bitmap(assets.getResult("LeftPathScreen"));
+            this._bgImage = new createjs.Bitmap(assets.getResult("scene4_2"));
             this.addChild(this._bgImage);
         }
 
@@ -22,12 +23,14 @@ module scenes {
             //var bgImage = new createjs.Bitmap("../../Assets/images/RightPath.png");
 
             // Add button to scene. Register for click callback function
-            this._leftButton = new objects.Button("Left", config.Screen.CENTER_X - 130, config.Screen.CENTER_Y + 180);
+            this._leftButton = new objects.Button("Left", config.Screen.CENTER_X - 239, config.Screen.CENTER_Y + 233);
             this.addChild(this._leftButton);
-            this._rightButton = new objects.Button("Right", config.Screen.CENTER_X + 130, config.Screen.CENTER_Y + 180);
-            this.addChild(this._rightButton);
             this._leftButton.on("click", this._leftButtonClick, this);
-            this._rightButton.on("click", this._rightButtonClick, this);
+
+            this._restartText = new createjs.Text("Restart", "bold 16px Arial", "#ffffff");
+            this._restartText.x = this._leftButton.x - (this._restartText.getBounds().width/6);
+            this._restartText.y = this._leftButton.y - 16;
+            this.addChild(this._restartText);
 
             // Add menu scene to global stage container
             stage.addChild(this);
@@ -40,12 +43,12 @@ module scenes {
         // Fucntion for when button is pressed
         private _rightButtonClick(event : createjs.MouseEvent) {
             // Change global scene variable to GAME. Call global changeScene() function
-            scene = config.Scene.scene2_1;
+            scene = config.Scene.scene1;
             changeScene();
         }
         private _leftButtonClick(event : createjs.MouseEvent) {
             // Change global scene variable to GAME. Call global changeScene() function
-            scene = config.Scene.scene2_2;
+            scene = config.Scene.scene1;
             changeScene();
         }
     }

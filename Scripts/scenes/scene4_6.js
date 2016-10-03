@@ -10,19 +10,20 @@ var scenes;
         // Menu Class Contructor
         function scene4_6() {
             _super.call(this);
-            this._bgImage = new createjs.Bitmap(assets.getResult("LeftPathScreen"));
+            this._bgImage = new createjs.Bitmap(assets.getResult("scene4_6"));
             this.addChild(this._bgImage);
         }
         scene4_6.prototype.start = function () {
             console.log("Scene 4-6 Scene Started");
             //var bgImage = new createjs.Bitmap("../../Assets/images/RightPath.png");
             // Add button to scene. Register for click callback function
-            this._leftButton = new objects.Button("Left", config.Screen.CENTER_X - 130, config.Screen.CENTER_Y + 180);
+            this._leftButton = new objects.Button("Left", config.Screen.CENTER_X - 239, config.Screen.CENTER_Y + 233);
             this.addChild(this._leftButton);
-            this._rightButton = new objects.Button("Right", config.Screen.CENTER_X + 130, config.Screen.CENTER_Y + 180);
-            this.addChild(this._rightButton);
             this._leftButton.on("click", this._leftButtonClick, this);
-            this._rightButton.on("click", this._rightButtonClick, this);
+            this._restartText = new createjs.Text("Restart", "bold 16px Arial", "#ffffff");
+            this._restartText.x = this._leftButton.x - (this._restartText.getBounds().width / 6);
+            this._restartText.y = this._leftButton.y - 16;
+            this.addChild(this._restartText);
             // Add menu scene to global stage container
             stage.addChild(this);
         };
@@ -36,7 +37,7 @@ var scenes;
         };
         scene4_6.prototype._leftButtonClick = function (event) {
             // Change global scene variable to GAME. Call global changeScene() function
-            scene = config.Scene.scene2_2;
+            scene = config.Scene.scene1;
             changeScene();
         };
         return scene4_6;

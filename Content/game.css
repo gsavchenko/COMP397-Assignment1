@@ -1,5 +1,5 @@
 body {
-    background-color: darkgrey;
+    background-color: white;
 }
 
 .game {
@@ -11,6 +11,6 @@ canvas {
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
-    background-color: gray;
+    background-color: white;
     margin-left: 10%;
 }

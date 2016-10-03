@@ -16,10 +16,25 @@ var gameScene : scenes.Game;
 var assetData:objects.Asset[] = [
     {id: "Start", src:"../../Assets/images/Start.png"}, 
     {id: "Back", src:"../../Assets/images/Back.png"},
-    {id: "Right", src:"../../Assets/images/Right.png"},
-    {id: "Left", src:"../../Assets/images/Left.png"},
+    {id: "Right", src:"../../Assets/images/button.png"},
+    {id: "Left", src:"../../Assets/images/button.png"},
     {id: "LeftPathScreen", src:"../../Assets/images/LeftPath.png"},
-    {id: "RightPathScreen", src:"../../Assets/images/RightPath.png"}
+    {id: "RightPathScreen", src:"../../Assets/images/RightPath.png"},
+    {id: "scene1", src:"../../Assets/images/scene1.png"},
+    {id: "scene2_1", src:"../../Assets/images/scene2_1.png"},
+    {id: "scene2_2", src:"../../Assets/images/scene2_2.png"},
+    {id: "scene3_1", src:"../../Assets/images/scene3_1.png"},
+    {id: "scene3_2", src:"../../Assets/images/scene3_2.png"},
+    {id: "scene3_3", src:"../../Assets/images/scene3_3.png"},
+    {id: "scene3_4", src:"../../Assets/images/scene3_4.png"},
+    {id: "scene4_1", src:"../../Assets/images/scene4_1.png"},
+    {id: "scene4_2", src:"../../Assets/images/scene4_2.png"},
+    {id: "scene4_3", src:"../../Assets/images/scene4_3.png"},
+    {id: "scene4_4", src:"../../Assets/images/scene4_4.png"},
+    {id: "scene4_5", src:"../../Assets/images/scene4_5.png"},
+    {id: "scene4_6", src:"../../Assets/images/scene4_6.png"},
+    {id: "scene4_7", src:"../../Assets/images/scene4_7.png"},
+    {id: "scene4_8", src:"../../Assets/images/scene4_8.png"}
 ];
 
 function preload() {
@@ -110,22 +125,22 @@ function changeScene() : void {
             break;
         case config.Scene.scene4_3 :
             stage.removeAllChildren();
-            currentScene = new scenes.scene2_2();
+            currentScene = new scenes.scene4_3();
             console.log("Starting scene4_3 scene");
             break;
-        case config.Scene.scene2_2 :
+        case config.Scene.scene4_4 :
             stage.removeAllChildren();
-            currentScene = new scenes.scene2_2();
+            currentScene = new scenes.scene4_4();
             console.log("Starting scene4_4 scene");
             break;
-        case config.Scene.scene2_2 :
+        case config.Scene.scene4_5 :
             stage.removeAllChildren();
-            currentScene = new scenes.scene2_2();
+            currentScene = new scenes.scene4_5();
             console.log("Starting scene4_5 scene");
             break;
-        case config.Scene.scene2_2 :
+        case config.Scene.scene4_6 :
             stage.removeAllChildren();
-            currentScene = new scenes.scene2_2();
+            currentScene = new scenes.scene4_6();
             console.log("Starting scene4_6 scene");
             break;
         case config.Scene.scene4_7 :
