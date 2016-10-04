@@ -1,5 +1,12 @@
 /*
-    Module to store globally accessible values and states for the game.
+    Class:              scene
+    Description:        config module to store globally accessible values and states for the game.
+
+    Author:             George Savchenko 
+    Revision History:
+    Name:               Date:        Description:
+    -------------------------------------------------------------------
+    George Savchenko    10/3/2016    renamed variables and removed code
 */
 module config {
     export class Scene {

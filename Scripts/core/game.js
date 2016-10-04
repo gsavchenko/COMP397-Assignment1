@@ -1,14 +1,12 @@
 /// <reference path = "_reference.ts" />
 /*
-    Class:              game
-    Description:        scenes module to group all user-defined scenes under the same namespace/module. Game scene that contains all assets and
-                        functionality associated with the game itself.
+    Description:        Game scene that contains all assets and functionality associated with the game itself.
 
     Author:             George Savchenko
     Revision History:
     Name:               Date:        Description:
-    ------------------------------------------------------------------
-    George Savchenko    10/3/2016    adding comments and cleaning code
+    -------------------------------------------------------------------
+    George Savchenko    10/3/2016    renamed variables and removed code
 */
 // Global Variables
 var assets;
@@ -18,11 +16,10 @@ var currentScene;
 var scene;
 // Game scenes
 var entranceScene;
-var gameScene;
 // Preload Assets required
 var assetData = [
-    { id: "Left", src: "../../Assets/images/button.png" },
-    { id: "Right", src: "../../Assets/images/button.png" },
+    { id: "button_left", src: "../../Assets/images/button.png" },
+    { id: "button_right", src: "../../Assets/images/button.png" },
     { id: "scene1", src: "../../Assets/images/scene1.png" },
     { id: "scene2_1", src: "../../Assets/images/scene2_1.png" },
     { id: "scene2_2", src: "../../Assets/images/scene2_2.png" },
@@ -66,6 +63,7 @@ function gameLoop(event) {
     currentScene.update();
     stage.update();
 }
+// This function will change the scene to what scene is currently set as
 function changeScene() {
     // Simple state machine pattern to define scene swapping.
     switch (scene) {

@@ -20,7 +20,7 @@ module scenes {
             this.addChild(this._bgImage);
 
             // Add button to scene 
-            this._leftButton = new objects.Button("Left", config.Screen.CENTER_X - 239, config.Screen.CENTER_Y + 233);
+            this._leftButton = new objects.Button("button_left", config.Screen.CENTER_X - 239, config.Screen.CENTER_Y + 233);
             this.addChild(this._leftButton);
             // Register for click callback function
             this._leftButton.on("click", this._leftButtonClick, this);
